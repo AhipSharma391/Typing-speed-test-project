@@ -59,8 +59,7 @@ class Game:
                         count += 1
                 except:
                     pass
-            self.accuracy = count/len(self.word)*100#*******SAMARTH******
-
+            self.accuracy = count/len(self.word)*100
             #Calculate words per minute
             self.wpm = len(self.input_text)*60/(5*self.total_time)
             self.end = True
@@ -106,7 +105,7 @@ class Game:
                      # position of reset box
                     if(x >= 310 and x <= 510 and y >= 390 and self.end):
                         self.reset_game()
-                        x, y = pygame.mouse.get_pos()#******JASPREET********
+                        x, y = pygame.mouse.get_pos()
                 elif event.type == pygame.KEYDOWN:
                     if self.active and not self.end:
                         if event.key == pygame.K_RETURN:
@@ -139,7 +138,7 @@ class Game:
         self.word = ''
         self.time_start = 0
         self.total_time = 0
-        self.wpm = 0#*********AHIP**********
+        self.wpm = 0
 
         # Get random sentence
         self.word = self.get_sentence()
